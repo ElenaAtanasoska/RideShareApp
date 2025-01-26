@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ride_share/models/route_model.dart';
 import 'package:ride_share/screens/profile_screen.dart';
 import 'package:ride_share/widgets/route_drivers_card.dart';
-
+import '../widgets/app_menu.dart'; // Import the AppMenu widget
 
 class RoutesDriversScreen extends StatelessWidget {
   final List<RouteModel> activeRoutes = [
@@ -10,7 +10,6 @@ class RoutesDriversScreen extends StatelessWidget {
     RouteModel(from: 'City1', to: 'City2', date: '12/01/2025', time: '11:00', driver: 'Name1', passengers: 4),
     RouteModel(from: 'City1', to: 'City2', date: '13/01/2025', time: '14:00', driver: 'Name1', passengers: 2),
     RouteModel(from: 'City1', to: 'City2', date: '17/01/2025', time: '18:00', driver: 'Name1', passengers: 1),
-
   ];
 
   @override
@@ -23,15 +22,9 @@ class RoutesDriversScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.white70,
         centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black,),
-          onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => ProfileScreen()),
-            );
-          },
-        ),
+        actions: [
+          AppMenu(), // Add the reusable AppMenu widget here
+        ],
       ),
       body: ListView.builder(
         itemCount: activeRoutes.length,

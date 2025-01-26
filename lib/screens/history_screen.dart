@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ride_share/screens/profile_screen.dart';
 import 'package:ride_share/screens/routes_drivers_screen.dart';
 import 'package:ride_share/widgets/route_card_history.dart';
 import '../models/route_model.dart';
@@ -53,7 +54,7 @@ class HistoryScreen extends StatelessWidget {
           onPressed: () {
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => RoutesDriversScreen()),
+              MaterialPageRoute(builder: (context) => ProfileScreen()),
             );
           },
         ),
