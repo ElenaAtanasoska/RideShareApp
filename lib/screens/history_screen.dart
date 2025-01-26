@@ -45,11 +45,11 @@ class HistoryScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'History of finished routes',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          style: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.bold, color: Color(0xFF1F1047)),
         ),
-        backgroundColor: Colors.blue[900],
+        backgroundColor: Colors.white70,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white,),
+          icon: const Icon(Icons.arrow_back, color: Colors.black,),
           onPressed: () {
             Navigator.pushReplacement(
               context,

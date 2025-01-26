@@ -11,6 +11,7 @@ class RouteHistoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.grey[300],
       margin: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -39,7 +40,7 @@ class RouteHistoryCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.location_on, size: 18, color: Colors.blue[800]),
+                        Icon(Icons.location_on, size: 18, color: Color(0xFF1F1047)),
                         SizedBox(width: 4),
                         Text(
                           'From:',
@@ -63,7 +64,7 @@ class RouteHistoryCard extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Icon(Icons.location_on, size: 18, color: Colors.blue[800]),
+                          Icon(Icons.location_on, size: 18, color: Color(0xFF1F1047)),
                           SizedBox(width: 4),
                           Text(
                             'To:',
@@ -93,7 +94,7 @@ class RouteHistoryCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.airline_seat_recline_extra, size: 18, color: Colors.blue[800]),
+                        Icon(Icons.airline_seat_recline_extra, size: 18, color: Color(0xFF1F1047)),
                         SizedBox(width: 4),
                         Text(
                           'I was:',
@@ -115,7 +116,7 @@ class RouteHistoryCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.favorite, size: 18, color: Colors.blue[800]),
+                        Icon(Icons.favorite, size: 18, color: Color(0xFF1F1047)),
                         SizedBox(width: 4),
                         Text(
                           'Would I recommend:',

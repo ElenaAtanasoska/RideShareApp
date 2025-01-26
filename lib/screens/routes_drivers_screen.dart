@@ -19,12 +19,12 @@ class RoutesDriversScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "Routes by drivers",
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          style: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.bold, color: Colors.black),
         ),
-        backgroundColor: Colors.blue[900],
+        backgroundColor: Colors.white70,
         centerTitle: true,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white,),
+          icon: const Icon(Icons.arrow_back, color: Colors.black,),
           onPressed: () {
             Navigator.pushReplacement(
               context,

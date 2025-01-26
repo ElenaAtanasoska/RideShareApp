@@ -11,6 +11,7 @@ class RouteDriversCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.grey[300],
       margin: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -21,14 +22,14 @@ class RouteDriversCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                Icon(Icons.location_on, size: 20, color: Colors.blue[900]),
+                Icon(Icons.location_on, size: 20, color: Color(0xFF1F1047)),
                 SizedBox(width: 8),
                 Text(
                   route.from,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 Spacer(),
-                Icon(Icons.calendar_today, size: 20, color: Colors.blue[900]),
+                Icon(Icons.calendar_today, size: 20, color: Color(0xFF1F1047)),
                 SizedBox(width: 8),
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 5.0),
@@ -43,14 +44,14 @@ class RouteDriversCard extends StatelessWidget {
 
             Row(
               children: [
-                Icon(Icons.edit_location_sharp, size: 20, color: Colors.blue[900]),
+                Icon(Icons.edit_location_sharp, size: 20, color: Color(0xFF1F1047)),
                 SizedBox(width: 8),
                 Text(
                   route.to,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 Spacer(),
-                Icon(Icons.access_time, size: 20, color: Colors.blue[900]),
+                Icon(Icons.access_time, size: 20, color: Color(0xFF1F1047)),
                 SizedBox(width: 8),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32.0),
@@ -65,14 +66,14 @@ class RouteDriversCard extends StatelessWidget {
 
             Row(
               children: [
-                Icon(Icons.directions_car, size: 20, color: Colors.blue[900]),
+                Icon(Icons.directions_car, size: 20, color: Color(0xFF1F1047)),
                 SizedBox(width: 8),
                 Text(
                   route.driver ?? '',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 Spacer(),
-                Icon(Icons.group, size: 20, color: Colors.blue[900]),
+                Icon(Icons.group, size: 20, color: Color(0xFF1F1047)),
                 SizedBox(width: 8),
                 Text(
                   '${route.passengers} passengers',
@@ -93,7 +94,7 @@ class RouteDriversCard extends StatelessWidget {
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue[900],
+                  backgroundColor: Color(0xFF1F1047),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),

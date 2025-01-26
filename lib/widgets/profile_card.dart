@@ -13,14 +13,14 @@ class ProfileCard extends StatelessWidget {
       children: [
         Icon(
           icon,
-          color: Colors.blue[900],
+          color: Color(0xFF1F1047),
           size: 28,
         ),
         const SizedBox(width: 20),
         Expanded(
           child: Text(
             text,
-            style: const TextStyle(
+            style: const TextStyle(fontFamily: 'Lato',
               fontSize: 20,
               fontWeight: FontWeight.w500,
               color: Colors.black87,
