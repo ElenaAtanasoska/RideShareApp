@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ride_share/models/route_model.dart';
-import 'package:ride_share/screens/profile_screen.dart';
 import 'package:ride_share/widgets/route_drivers_card.dart';
-import '../widgets/app_menu.dart'; // Import the AppMenu widget
+import '../widgets/app_menu.dart';
 
 class RoutesDriversScreen extends StatelessWidget {
   final List<RouteModel> activeRoutes = [
@@ -23,8 +22,10 @@ class RoutesDriversScreen extends StatelessWidget {
         backgroundColor: Colors.white70,
         centerTitle: true,
         actions: [
-          AppMenu(), // Add the reusable AppMenu widget here
+          AppMenu(),
         ],
+        leading: null,
+        automaticallyImplyLeading: false,
       ),
       body: ListView.builder(
         itemCount: activeRoutes.length,

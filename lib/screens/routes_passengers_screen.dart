@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ride_share/models/route_passenger_model.dart';
-import '../screens/profile_screen.dart';
-import '../widgets/app_menu.dart'; // Import the reusable AppMenu
+import '../widgets/app_menu.dart';
 import '../widgets/passenger_route_card.dart';
 
 class RoutesPassengersScreen extends StatelessWidget {
@@ -34,24 +33,24 @@ class RoutesPassengersScreen extends StatelessWidget {
               pinned: false,
               leading: Padding(
                 padding: EdgeInsets.only(top: 24, left: 10),
-                child: IconButton(
-                  icon: Icon(Icons.arrow_back_ios_new, color: Color(0xFF1F1047)),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
+                // child: IconButton(
+                //   icon: Icon(Icons.arrow_back_ios_new, color: Color(0xFF1F1047)),
+                //   onPressed: () {
+                //     Navigator.pop(context);
+                //   },
+                // ),
               ),
               actions: [
                 Padding(
                   padding: const EdgeInsets.only(top: 20, right: 10),
-                  child: IconButton(
-                    icon: Icon(Icons.person, color: Color(0xFF1F1047), size: 30),
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/profile');
-                    },
-                  ),
+                  child: AppMenu(),
+                  // child: IconButton(
+                  //   icon: Icon(Icons.person, color: Color(0xFF1F1047), size: 30),
+                  //   onPressed: () {
+                  //     Navigator.pushNamed(context, '/profile');
+                  //   },
+                  // ),
                 ),
-                AppMenu(), // Using the AppMenu widget here
               ],
             ),
           ];
