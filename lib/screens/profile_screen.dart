@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ride_share/screens/routes_drivers_screen.dart';
+import '../widgets/app_menu.dart';
 import 'history_screen.dart';
 import '../models/profile_model.dart';
 import '../widgets/profile_card.dart';
@@ -24,15 +24,11 @@ class ProfileScreen extends StatelessWidget {
           style: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.bold, color: Color(0xFF1F1047)),
         ),
         centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black,),
-          onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => RoutesDriversScreen()),
-            );
-          },
-        ),
+        actions: [
+          AppMenu(),
+        ],
+        leading: null,
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Padding(
