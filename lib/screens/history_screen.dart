@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ride_share/screens/profile_screen.dart';
 import 'package:ride_share/widgets/route_card_history.dart';
 import '../models/route_model.dart';
+import '../widgets/app_menu.dart';
 
 class HistoryScreen extends StatelessWidget {
   final List<RouteModel> historyRoutes = [
@@ -48,15 +49,11 @@ class HistoryScreen extends StatelessWidget {
           style: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.bold, color: Color(0xFF1F1047)),
         ),
         backgroundColor: Colors.white70,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black,),
-          onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => ProfileScreen()),
-            );
-          },
-        ),
+        actions: [
+          AppMenu(),
+        ],
+        leading: null,
+        automaticallyImplyLeading: false,
       ),
       body: ListView.builder(
         itemCount: historyRoutes.length,
